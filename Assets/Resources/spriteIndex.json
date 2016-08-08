@@ -1,0 +1,15 @@
+{
+	"card1": {
+		"name" : "card1",
+		"imagePathFront" : "card1pf",
+		"imagePathBack" : "card1pb",
+		"count" : 1
+	},
+
+	"card2": {
+		"name" : "card2",
+		"imagePathFront" : "card2pf",
+		"imagePathBack" : "card2pb",
+		"count" : 1
+	}
+}
