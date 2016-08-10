@@ -77,17 +77,19 @@ public class Deck : MonoBehaviour {
 		cardLibrary.Add (card);
 	}
 
-	public void deal(GameObject card, Vector3 pos) {
+	public Gameobject deal(GameObject card, Vector3 pos) {
 		cards.Remove (card);
 		card.transform.SetParent (null);
 		card.transform.position = pos;
+		return card;
 	}
 
-	public void deal(Vector3 pos) {
+	public GameObject deal(Vector3 pos) {
 		pos.z = 0;
 		if (!isEmpty ()) {
-			deal (cards [cards.Count - 1], pos);
+			return deal (cards [cards.Count - 1], pos);
 		}
+		return null;
 	}
 
 	public void recall() {
