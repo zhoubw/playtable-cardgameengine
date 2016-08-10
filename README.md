@@ -71,7 +71,8 @@ Only fields intended for use are included in this documentation.
 | createCard      |                  | GameObject | Creates an instance of a cardPrefab and adds/registers it to the deck. |
 | add             | GameObject card  | void    | Adds a card to the deck. A card that collides with a deck will be added to the deck. |
 | register        | GameObject card  | void    | Registers a card to the deck. That card will be recalled to the deck on recall(). |
-| deal            | GameObject card, Vector3 pos | void | Deals a given card to the given position. |
+| deal            | GameObject card, Vector3 pos | GameObject | Deals a given card to the given position and returns the card. |
+| deal            | Vector3 pos | GameObject | Deals the top card to the given position and returns the card. |
 | recall          |                  | void    | Returns registered cards back to the deck. |
 | shuffle         |                  | void    | Shuffles the deck by selection. This will be updated in the future. |
 | flip            |                  | void    | Flips the card facedown/up. |
