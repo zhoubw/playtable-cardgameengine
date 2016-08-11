@@ -105,12 +105,12 @@ public class Deck : MonoBehaviour {
 			return;
 		}
 		for (int i = 0; i < cards.Count; i++) {
-			System.Random r = new System.Random ();
-			int first = r.Next (cards.Count);
-			int second = r.Next (cards.Count);
 			iTween.ShakePosition (cards [i], new Vector3 (1f, 0f, 0f), 0.5f);
-			swap (first, second);
-			
+		}
+		for (int i = cards.Count - 1; i >= 0; i--) {
+			System.Random r = new System.Random ();
+			int j = r.Next (i);
+			swap (i, j);
 		}
 	}
 
