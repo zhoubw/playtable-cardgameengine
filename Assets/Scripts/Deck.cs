@@ -77,7 +77,7 @@ public class Deck : MonoBehaviour {
 		cardLibrary.Add (card);
 	}
 
-	public Gameobject deal(GameObject card, Vector3 pos) {
+	public GameObject deal(GameObject card, Vector3 pos) {
 		cards.Remove (card);
 		card.transform.SetParent (null);
 		card.transform.position = pos;
